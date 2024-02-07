@@ -1,0 +1,166 @@
+<style>
+.box{
+    background:url(https://4.bp.blogspot.com/-faDGpLD_luQ/T87jXIdVz0I/AAAAAAAABxc/HWUZa05ZNjI/s1600/pink.png);
+    padding:5px;
+    border:1px dashed #e69e8f;
+}
+.statiooo{
+font-family:monospace;
+font-size:13px;
+background:url(https://64.media.tumblr.com/b7ac9240b4d1a9b31860b5cc0d676484/003b8004be359bef-52/s75x75_c1/93daf53343bfc6f98d89114c377a2b1dac99e6f0.gifv) left center;
+background-repeat:no-repeat;
+color:#000;
+text-align:left;
+border-bottom:0px dashed #e69e8f;
+text-decoration:none;
+padding:10px 10px 5px 25px;
+-webkit-transition: 0.4s;
+-moz-transition: 0.4s;
+    
+}
+
+.statiooo:hover{
+    background:url(https://64.media.tumblr.com/0001d0fcf46ac9a65182a167eb8cd4a1/003b8004be359bef-c1/s75x75_c1/ba918c74feeb4f5f4b7cb3ee9d49fe3b43f0d576.gifv) left center;
+    background-repeat:no-repeat;
+    padding:10px 10px 5px 45px;
+letter-spacing:1px;
+text-shadow: 2px 0 .2px #FF0000;
+-webkit-transition: 0.4s;
+-moz-transition: 0.4s;
+}
+
+</style>
+
+<center>
+
+<script>
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0) break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = (argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+function DeleteCookie (name) {
+var exp = new Date();
+exp.setTime (exp.getTime() - 1);
+var cval = GetCookie (name);
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+}
+var expDays = 30;
+var exp = new Date();
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+function amt(){
+var count = GetCookie('count')
+if(count == null) {
+SetCookie('count','1')
+return 1
+}
+else {
+var newcount = parseInt(count) + 1;
+DeleteCookie('count')
+SetCookie('count',newcount,exp)
+return count
+}
+}
+function getCookieVal(offset) {
+var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+</script>
+
+<div class="box">
+
+<div class="statiooo">
+<script>
+document.write("You have been here <b>" + amt() + "</b> times. ")
+</script>
+</div>
+
+<div class="statiooo">
+<script type="text/javascript">
+
+var days = 999; // days until cookie expires = 2 years.
+var lastvisit=new Object();
+var firstvisitmsg="This is your first time been here.";
+lastvisit.subsequentvisitmsg="Last visits <b>[displaydate]</b>.";
+
+lastvisit.getCookie=function(Name){
+var re=new RegExp(Name+"=[^;]+", "i");
+if (document.cookie.match(re))
+return document.cookie.match(re)[0].split("=")[1];
+return'';
+}
+
+lastvisit.setCookie=function(name, value, days){
+var expireDate = new Date();
+
+var expstring=expireDate.setDate(expireDate.getDate()+parseInt(days));
+document.cookie = name+"="+value+"; expires="+expireDate.toGMTString()+"; path=/";
+}
+
+lastvisit.showmessage = function() {
+var wh = new Date();
+if (lastvisit.getCookie("visitc") == "") {
+lastvisit.setCookie("visitc", wh, days);
+document.write(firstvisitmsg);
+}
+
+else {
+var lv = lastvisit.getCookie("visitc");
+var lvp = Date.parse(lv);
+var now = new Date();
+now.setTime(lvp);
+var day = new Array("Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat");
+var month = new Array ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+var dd = now.getDate();
+var dy = now.getDay();
+dy = day[dy];
+var mn = now.getMonth();
+mn = month[mn];
+yy = now.getFullYear();
+var hh = now.getHours();
+var ampm = "AM";
+if (hh >= 12) {ampm = "PM"}
+if (hh >12){hh = hh - 12};
+if (hh == 0) {hh = 12}
+if (hh < 10) {hh = "0" + hh};
+var mins = now.getMinutes();
+if (mins < 10) {mins = "0"+ mins}
+var secs = now.getSeconds();
+if (secs < 10) {secs = "0" + secs}
+var dispDate = dy + ", " + dd + " " + mn + " " + yy + " " + hh + ":" + mins + ":" + secs + " " + ampm
+document.write(lastvisit.subsequentvisitmsg.replace("\[displaydate\]", dispDate))
+}
+
+lastvisit.setCookie("visitc", wh, days);
+
+}
+
+lastvisit.showmessage();
+
+
+</script></div>
+</center></div>
