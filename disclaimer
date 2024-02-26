@@ -1,0 +1,59 @@
+
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Miniver' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+<style>
+    .h4 {background-position:center;
+    width:100%;
+    text-align:center;
+    margin-top: -55px; 
+    margin-left: -35px;
+    margin-bottom:-10px;
+    color:orange;    
+    font: normal 75px "Cookie";
+    text-shadow: 0 0 5px #111;
+    color: #fff;
+    letter-spacing: 1px;
+    padding:5px;
+    background:transparent;
+        
+    }
+
+#box{
+        background: url(https://2.bp.blogspot.com/-XLY3R0txwEU/UAkJS9n7oqI/AAAAAAAADYo/1o0xoLazhp4/s1600/kk.png) fixed;
+    margin-top:120px;
+border-top:15px solid #ff8fa0;
+border-right:2px solid #ff8fa0;
+border-left:2px solid #ff8fa0;
+border-bottom:2px solid #ff8fa0;
+ width:330px;
+ padding:   0px 0px 15px 40px;
+ font: bold 15px "Lekton";
+    color:#444;
+        -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    text-shadow:15px 0px transparent, -15px 0px transparent;
+}
+
+#box:hover{
+        text-shadow:0px 0px #333, -0px 0px #333;
+border-top:15px solid #ff6f61;
+border-right:2px solid #ff6f61;
+border-left:2px solid #ff6f61;
+border-bottom:2px solid #ff6f61;
+        -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+    
+</style>
+
+<div id="box">
+    <center><div class="h4">disclaimer</div></center>
+Status        &emsp;&emsp;&emsp;&nbsp;&nbsp;    : &nbsp;Married<br>
+Anniversary   &emsp;&nbsp;            : &nbsp;30 June 2022<br>
+Husband       &emsp;&emsp;&nbsp;&nbsp;&nbsp      : &nbsp;Mohammad Hidayad<br>
+Speciality   &emsp;&nbsp;&nbsp;        : &nbsp;Chest, Punat, Donut<br>
+
+</div></div>
