@@ -58,7 +58,7 @@
 
     .date {
         margin-right:10px;
-        display: inline-block;
+        display: inline;
         font-family: lekton;
         font-size: 1.7em;
         line-height:30px;
@@ -71,13 +71,13 @@
     }
 
     .time {
-        display: inline-block;
+        display: inline;
         min-width: 20px;
     }
 
     .colon {
         font-size: 1em;
-        display: inline-block;
+        display: inline;
     }
 </style>
 </head>
@@ -87,11 +87,14 @@
             <div class="greet" id="greet"></div>
             <div class="date" id="date"></div>                
             <div class="clock">
-            [    <div class="time" id="hour"></div>
+            [   
+                <div class="time" id="hour"></div>
                 <div class="colon">:</div>
                 <div class="time" id="min"></div>
                 <div class="colon">:</div>
-                <div class="time" id="sec"></div>&nbsp;]
+                <div class="time" id="sec"></div>
+                
+            &nbsp;]
             </div>
         </div>
     </div>
