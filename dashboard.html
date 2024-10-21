@@ -1,16 +1,23 @@
 <style>
     .h4 {
         text-decoration: none;
-        text-align: center;
         font-size: 25px;
         font-family: "Lucida Console";
         letter-spacing: 2px;
         padding: 2px;
+        color: #E6A4B4;
+    }
+        
+    .h4:hover {
+         color: #fff;
+
     }
 
+    
+
     #box {
+        text-decoration: none;
         text-shadow: 1px 0px 0px #333333;
-        color: #E6A4B4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -30,9 +37,10 @@
     }
 
     #box:hover {
-        text-decoration: none;
-        text-shadow: 5px 0px 0px #333333;
-        box-shadow: inset 0px 19px 0px #E6A4B4, inset 0px -19px 0px #E6A4B4;
+        text-decoration: none!important;
+                color: #fff!important;
+        text-shadow: 8px 0px 0px #333333;
+        box-shadow: inset 0px 15px 0px #E6A4B4, inset 0px -15px 0px #E6A4B4;
         -webkit-animation-name: shake;
         -webkit-animation-duration: 2s;
         -webkit-animation-iteration-count: infinite;
@@ -41,10 +49,8 @@
         border-left: 1px dashed #FBA1B7;
         border-top: 2px dashed #FBA1B7;
         border-bottom: 2px dashed #FBA1B7;
-        text-decoration: none;
         -webkit-transition: 0.9s;
         -moz-transition: 0.9s;
-        color: #fff;
     }
 
     @-moz-keyframes shake
@@ -187,8 +193,5 @@
     }
 </style>
 <div id="box">
-    <center>
-        <div class="h4">
-            <a href="https://www.notion.so/c43047a1b30f46139f082c1479a501d7?pvs=4">dashboard</a></div>
-    </center>
+            <a class="h4" href="https://www.notion.so/c43047a1b30f46139f082c1479a501d7?pvs=4">dashboard</a>
 </div>
